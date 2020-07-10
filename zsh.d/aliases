@@ -1,0 +1,28 @@
+# Global
+alias ll="ls -lah"
+
+# VIM
+alias vimconfig="vim ~/.vimrc"
+
+# ZSH
+alias zshconfig="vim ~/.zshrc"
+alias zshreload="source ~/.zshrc"
+
+# TERRAFORM
+alias tf="terraform"
+alias tfp="terraform plan | scenery"
+alias tfa="terraform apply -auto-approve"
+alias tg="terragrunt"
+
+# SSH
+alias sshconfig="vim $HOME/.ssh/config"
+alias sshdir="cd $HOME/.ssh/"
+
+# AWS
+alias aws-whoami="aws sts get-caller-identity"
+alias awsconfig="vim $HOME/.aws/config"
+
+# K8S
+alias kc="kubectl"
+
+# vim: set filetype=zsh:
