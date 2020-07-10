@@ -1,0 +1,17 @@
+config:
+  backup: true
+  banner: true
+  create: true
+  dotpath: ../../.dotfiles
+  ignoreempty: false
+  keepdot: false
+  link_dotfile_default: link
+  link_on_import: link
+dotfiles:
+  f_config.rasi:
+    src: config/rofi/config.rasi
+    dst: ~/.config/rofi/config.rasi
+profiles:
+  work:
+    dotfiles:
+    - f_config.rasi
