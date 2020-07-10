@@ -17,16 +17,21 @@ dotfiles:
   f_zshrc:
     src: zshrc
     dst: ~/.zshrc
+  f_config:
+    src: config/termite/config
+    dst: ~/.config/termite/config
 profiles:
   work:
     dotfiles:
     - d_rofi
     - d_zsh.d
     - f_zshrc
+    - f_config
   home:
     dotfiles:
     - d_rofi
     - d_zsh.d
     - f_zshrc
+    - f_config
 dynvariables:
   user: echo $USER
