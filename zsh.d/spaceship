@@ -1,0 +1,57 @@
+SPACESHIP_PROMPT_ORDER=(
+  dir           # Current directory section
+  git           # Git section (git_branch + git_status)
+  venv
+  aws
+  golang
+  exec_time     # Execution time
+  line_sep      # Line break
+  vi_mode       # Vi-mode indicator
+  jobs          # Background jobs indicator
+  exit_code     # Exit code section
+  char          # Prompt character
+)
+
+SPACESHIP_PROMPT_ADD_NEWLINE=false
+
+SPACESHIP_DIR_COLOR="blue"
+
+#SPACESHIP_CHAR_SYMBOL="❯"
+SPACESHIP_CHAR_SYMBOL="⇒"
+SPACESHIP_CHAR_SUFFIX=" "
+SPACESHIP_CHAR_COLOR_SUCCESS="green"
+
+SPACESHIP_GIT_PREFIX="%F{white}git:%F{magenta}"
+SPACESHIP_GIT_SYMBOL=""
+
+#SPACESHIP_GIT_BRANCH_PREFIX="%F{white}git:%F{magenta}"
+SPACESHIP_GIT_BRANCH_PREFIX=""
+
+SPACESHIP_GIT_STATUS_ADDED="%F{yellow}+%F{red}"
+SPACESHIP_GIT_STATUS_UNTRACKED="%F{blue}?%F{red}"
+SPACESHIP_GIT_STATUS_DELETED="%F{green}x%F{red}"
+SPACESHIP_GIT_STATUS_MODIFIED="%F{red}!%F{red}"
+SPACESHIP_GIT_STATUS_STASHED=""
+
+SPACESHIP_GIT_STATUS_PREFIX="%F{magenta}(%F{red}"
+SPACESHIP_GIT_STATUS_SUFFIX="%F{magenta})%F{magenta}"
+#SPACESHIP_GIT_STATUS_COLOR="red"
+
+SPACESHIP_VENV_PREFIX="venv:"
+SPACESHIP_VENV_SYMBOL=""
+SPACESHIP_VENV_COLOR="green"
+
+SPACESHIP_AWS_PREFIX="aws:"
+SPACESHIP_AWS_SYMBOL=""
+
+SPACESHIP_GOLANG_PREFIX="go:"
+SPACESHIP_GOLANG_SYMBOL=""
+
+# Simplify prompt if we're using Hyper
+if [[ "$TERM_PROGRAM" == "Hyper" ]]; then
+  SPACESHIP_PROMPT_SEPARATE_LINE=false
+  SPACESHIP_DIR_SHOW=false
+  SPACESHIP_GIT_BRANCH_SHOW=false
+fi
+
+# vim: set filetype=zsh:

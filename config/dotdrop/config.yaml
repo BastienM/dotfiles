@@ -8,10 +8,25 @@ config:
   link_dotfile_default: link
   link_on_import: link
 dotfiles:
-  f_config.rasi:
-    src: config/rofi/config.rasi
-    dst: ~/.config/rofi/config.rasi
+  d_rofi:
+    src: config/rofi
+    dst: ~/.config/rofi
+  d_zsh.d:
+    src: zsh.d
+    dst: ~/.zsh.d
+  f_zshrc:
+    src: zshrc
+    dst: ~/.zshrc
 profiles:
   work:
     dotfiles:
-    - f_config.rasi
+    - d_rofi
+    - d_zsh.d
+    - f_zshrc
+  home:
+    dotfiles:
+    - d_rofi
+    - d_zsh.d
+    - f_zshrc
+dynvariables:
+  user: echo $USER

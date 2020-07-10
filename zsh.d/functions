@@ -1,0 +1,35 @@
+function load-ssh {
+    SSHKEYS_PATH="${HOME}/.ssh"
+    key_path=$(find $SSHKEYS_PATH -name $1)
+
+    if [[ ! -z "${key_path}" ]]; then
+        ssh-add ${key_path}
+    else
+        echo "Unable to find key: ${1}"
+    fi
+}
+
+function aws-set() {
+  profile="${1:-manomano}"
+  region="${2:-eu-west-3}"
+  export AWS_PROFILE="${profile}"
+  #export AWS_ACCESS_KEY_ID=`aws configure get aws_access_key_id --profile $profile`
+  #export AWS_SECRET_ACCESS_KEY=`aws configure get aws_secret_access_key --profile $profile`
+  export AWS_DEFAULT_REGION="${region}"
+}
+
+# aws-set with mfa
+function aws-set-mfa() {
+  iam_user="bastien.mennesson"
+  region="eu-west-1"
+  profile="${1:-default}"
+  case "$profile" in
+        prod* ) aws-mfa --device arn:aws:iam::556593845588:mfa/${iam_user} --profile ${profile} ${2};;
+        * ) echo "Unrecognized AWS account env";;
+  esac
+  export AWS_PROFILE="${profile}"
+  export AWS_DEFAULT_REGION="${region}"
+  export AWS_REGION="${region}"
+}
+
+# vim: set filetype=zsh:

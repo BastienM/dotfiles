@@ -1,0 +1,4 @@
+export GOPATH="/home/bastien/.go"
+export PATH="$PATH:$GOPATH/bin"
+
+# vim: set filetype=zsh:
