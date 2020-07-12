@@ -7,8 +7,9 @@ config:
   keepdot: false
   link_dotfile_default: link
   link_on_import: link
+  longkey: true
 dotfiles:
-  d_rofi:
+  d_config_rofi:
     src: config/rofi
     dst: ~/.config/rofi
   d_zsh.d:
@@ -17,26 +18,26 @@ dotfiles:
   f_zshrc:
     src: zshrc
     dst: ~/.zshrc
-  f_config:
+  f_config_termite_config:
     src: config/termite/config
     dst: ~/.config/termite/config
-  f_rc.conf:
+  f_config_ranger_rc.conf:
     src: config/ranger/rc.conf
     dst: ~/.config/ranger/rc.conf
 profiles:
   work:
     dotfiles:
-    - d_rofi
+    - d_config_rofi
     - d_zsh.d
     - f_zshrc
-    - f_config
-    - f_rc.conf
+    - f_config_termite_config
+    - f_config_ranger_rc.conf
   home:
     dotfiles:
-    - d_rofi
+    - d_config_rofi
     - d_zsh.d
     - f_zshrc
-    - f_config
-    - f_rc.conf
+    - f_config_termite_config
+    - f_config_ranger_rc.conf
 dynvariables:
   user: echo $USER
