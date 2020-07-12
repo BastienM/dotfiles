@@ -20,6 +20,9 @@ dotfiles:
   f_config:
     src: config/termite/config
     dst: ~/.config/termite/config
+  f_rc.conf:
+    src: config/ranger/rc.conf
+    dst: ~/.config/ranger/rc.conf
 profiles:
   work:
     dotfiles:
@@ -27,11 +30,13 @@ profiles:
     - d_zsh.d
     - f_zshrc
     - f_config
+    - f_rc.conf
   home:
     dotfiles:
     - d_rofi
     - d_zsh.d
     - f_zshrc
     - f_config
+    - f_rc.conf
 dynvariables:
   user: echo $USER
