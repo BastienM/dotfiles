@@ -1,6 +1,10 @@
 # Global
 alias ll="ls -lah"
 
+# Dotfile
+alias dp="dotdrop"
+alias dotconfig="cd $HOME/.dotfiles"
+
 # VIM
 alias vimconfig="vim ~/.vimrc"
 
