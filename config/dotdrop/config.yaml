@@ -24,6 +24,9 @@ dotfiles:
   f_config_ranger_rc.conf:
     src: config/ranger/rc.conf
     dst: ~/.config/ranger/rc.conf
+  f_config_code---oss_user_settings.json:
+    src: config/Code - OSS/User/settings.json
+    dst: ~/.config/Code - OSS/User/settings.json
 profiles:
   work:
     dotfiles:
@@ -32,6 +35,7 @@ profiles:
     - f_zshrc
     - f_config_termite_config
     - f_config_ranger_rc.conf
+    - f_config_code---oss_user_settings.json
   home:
     dotfiles:
     - d_config_rofi
@@ -39,5 +43,6 @@ profiles:
     - f_zshrc
     - f_config_termite_config
     - f_config_ranger_rc.conf
+    - f_config_code---oss_user_settings.json
 dynvariables:
   user: echo $USER
