@@ -1,0 +1,47 @@
+{
+    "workbench.colorTheme": "Atom Material Theme",
+    "editor.minimap.renderCharacters": false,
+    "window.menuBarVisibility": "toggle",
+    "git.confirmSync": false,
+    "workbench.iconTheme": "file-icons",
+    "editor.fontFamily": "Inconsolata",
+    "editor.fontLigatures": true,
+    "editor.fontWeight": "400",
+    "editor.lineHeight": 20,
+    "editor.letterSpacing": 0.5,
+    "atomKeymap.promptV3Features": true,
+    "editor.multiCursorModifier": "ctrlCmd",
+    "editor.formatOnPaste": true,
+    "workbench.startupEditor": "newUntitledFile",
+    "editor.minimap.enabled": false,
+    "explorer.confirmDelete": false,
+    "window.zoomLevel": 0,
+    "explorer.confirmDragAndDrop": false,
+    "python.autoComplete.addBrackets": true,
+    "python.venvFolders": [
+        "/home/bastien/.venv/"
+    ],
+    "python.venvPath": "~/.venv",
+    "vsicons.dontShowNewVersionMessage": true,
+    "go.formatTool": "goimports",
+    "go.useLanguageServer": true,
+    "terraform.indexing": {
+        "enabled": true,
+        "liveIndexing": true,
+        "delay": 500,
+        "exclude": [
+            ".terraform/**/*",
+            "**/.terraform/**/*"
+        ]
+    },
+    "terraform.languageServer": {
+        "external": true,
+        "args": [
+            "serve"
+        ]
+    },
+    "files.associations": {
+        ".tf": "terraform",
+        ".hcl": "hcl"
+    }
+}
