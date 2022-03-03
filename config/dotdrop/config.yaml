@@ -27,6 +27,9 @@ dotfiles:
   f_config_code---oss_user_settings.json:
     src: config/Code - OSS/User/settings.json
     dst: ~/.config/Code - OSS/User/settings.json
+  f_gitconfig:
+    src: gitconfig
+    dst: ~/.gitconfig
 profiles:
   work:
     dotfiles:
@@ -36,6 +39,7 @@ profiles:
     - f_config_termite_config
     - f_config_ranger_rc.conf
     - f_config_code---oss_user_settings.json
+    - f_gitconfig
   home:
     dotfiles:
     - d_config_rofi
@@ -44,5 +48,6 @@ profiles:
     - f_config_termite_config
     - f_config_ranger_rc.conf
     - f_config_code---oss_user_settings.json
+    - f_gitconfig
 dynvariables:
   user: echo $USER

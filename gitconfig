@@ -1,0 +1,26 @@
+[mergetool "p4merge"]
+    path = /Applications/p4merge.app/Contents/MacOS/p4merge
+
+[core]
+    editor = nvim
+
+[merge]
+    tool = p4merge
+
+[gpg]
+	program = /usr/local/MacGPG2/bin/gpg2
+
+[tag]
+	forceSignAnnotated = true
+
+[alias]
+    st = status -sb
+    cam = commit --amend --no-edit
+    cm = commit -m
+    p = push
+    pf = push --force
+    a = add -A
+    d = diff
+    dc = diff --cached
+    cf = commit --fixup
+    pu = ![[ $(git config "branch.$(git symbolic-ref --short HEAD).merge") = '' ]] && git push -u origin $(git symbolic-ref --short HEAD) || git push
