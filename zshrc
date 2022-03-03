@@ -8,5 +8,8 @@ if [ -d "${HOME}/.zsh.d" ]; then
    done
 fi
 
-export VISUAL=vim
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+export VISUAL=nvim
 export EDITOR="$VISUAL"
+
