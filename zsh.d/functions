@@ -32,4 +32,8 @@ function aws-set-mfa() {
   export AWS_REGION="${region}"
 }
 
+function aws-decode-msg() {
+  aws sts decode-authorization-message --encoded-message "${1}" --query "DecodedMessage" --output text | sed 's#\\"#\"#g' | jq .
+}
+
 # vim: set filetype=zsh:
