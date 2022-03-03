@@ -1,4 +1,6 @@
-export GOPATH="/home/bastien/.go"
+{%@@ if env["HOME"] != "" @@%}
+export GOPATH="/Users/{%@@ env["HOME"] @@%}/.go"
+{%@@ endif @@%}
 export PATH="$PATH:$GOPATH/bin"
 
 # vim: set filetype=zsh:
