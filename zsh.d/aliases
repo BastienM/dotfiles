@@ -1,12 +1,14 @@
 # Global
 alias ll="ls -lah"
+alias cat="bat"
 
 # Dotfile
 alias dp="dotdrop"
 alias dotconfig="cd $HOME/.dotfiles"
 
 # VIM
-alias vimconfig="vim ~/.vimrc"
+alias vim="nvim"
+alias vimconfig="vim ~/.config/nvim/init.vim"
 
 # ZSH
 alias zshconfig="vim ~/.zshrc"
@@ -18,6 +20,9 @@ alias tfp="terraform plan | scenery"
 alias tfa="terraform apply -auto-approve"
 alias tg="terragrunt"
 
+# GIT
+alias gitconfig="vim $HOME/.gitconfig"
+
 # SSH
 alias sshconfig="vim $HOME/.ssh/config"
 alias sshdir="cd $HOME/.ssh/"
@@ -28,5 +33,14 @@ alias awsconfig="vim $HOME/.aws/config"
 
 # K8S
 alias kc="kubectl"
+alias kx="kubectx"
+alias kubeconfig="vim $HOME/.kube/config"
+
+# VSCode
+alias code="codium"
+
+# Kitty
+kittyconfig="vim $HOME/.config/kitty/kitty.conf"
+kittydir="cd $HOME/.config/kitty"
 
 # vim: set filetype=zsh:
