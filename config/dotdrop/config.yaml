@@ -30,6 +30,9 @@ dotfiles:
   f_gitconfig:
     src: gitconfig
     dst: ~/.gitconfig
+  d_config_kitty:
+    src: config/kitty
+    dst: ~/.config/kitty
 profiles:
   work:
     dotfiles:
@@ -40,6 +43,7 @@ profiles:
     - f_config_ranger_rc.conf
     - f_config_code---oss_user_settings.json
     - f_gitconfig
+    - d_config_kitty
   home:
     dotfiles:
     - d_config_rofi
@@ -49,5 +53,6 @@ profiles:
     - f_config_ranger_rc.conf
     - f_config_code---oss_user_settings.json
     - f_gitconfig
+    - d_config_kitty
 dynvariables:
   user: echo $USER
